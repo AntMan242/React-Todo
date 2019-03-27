@@ -38,7 +38,7 @@ import TodoForm from './components/TodoComponents/TodoForm';
       });
   };
 
-  changeTodo = e => this.setState({ [e,target.name]: e.target.value });
+  changeTodo = e => this.setState({ [e.target.name]: e.target.value });
 
   toggleTodoComplete = id => {
     let todos = this.state.todos.slice();
