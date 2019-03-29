@@ -23,7 +23,7 @@ import TodoForm from './components/TodoComponents/TodoForm';
         todo: ''
       }
     }
-  }
+  
 
   // you will need a place to store your state in this component.
   // design `App` to be the parent component of your application.
@@ -62,20 +62,22 @@ import TodoForm from './components/TodoComponents/TodoForm';
   render() {
     return (
       <div>
-        <TodoList>
+        <TodoList
           handleToggleComplete={this.toggleTodoComplete}
           todos={this.state.todos}
-        </TodoList>
+        />
 
-        <TodoForm>
+        <TodoForm
           value={this.state.todo}
           handleTodoChange={this.changeTodo}
           handleAddTodo={this.addTodo}
           handleClearTodos={this.clearCompletedTodos}
-        </TodoForm>
+        />
       </div>
     );
   }
 }
+  
+
 
 export default App;
